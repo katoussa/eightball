@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>EightBall</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="EightBall avec javascript" />
+        <meta name="keywords" content="EightBall, jeu, divination, avenir" />
+    </head>
+    <body>
+        <div id="eightball" class="eightball">
+            <script>
+                var userName = prompt("Quel est votre nom?");
+
+                if(userName){
+                console.log("Hello, " + userName + "!");
+                }else{
+                console.log("Hello!");
+                };
+
+                let userQuestion = prompt("Entrez votre question:");
+
+                console.log(`${userName || 'The user'} asked: ${userQuestion || 'nothing.'}`);
+
+                var randomNumber = Math.floor(Math.random() * 8);
+
+                //uncomment this console.log to check the number
+                //console.log(randomNumber);
+
+                var eightBall = randomNumber;
+
+                if(userQuestion == null || userQuestion == ""){
+                console.log(userQuestion);
+                }else{
+                    switch(eightBall){
+                    case 0:
+                        console.log("It is certain");
+                        break;
+                    case 1:
+                        console.log("It is decidly so");
+                        break;
+                    case 2:
+                        console.log("Reply hazy try again");
+                        break;
+                    case 3:
+                        console.log("Cannot predict now");
+                        break;
+                    case 4:
+                        console.log("Do not count on it");
+                        break;
+                    case 5:
+                        console.log("My sources say no");
+                        break;
+                    case 6:
+                        console.log("Outlook not so good");
+                        break;
+                    case 7:
+                        console.log("Signs point to yes");
+                        break;
+                    };
+                };   
+            </script>
+        </div>
+    </body>
+</html>
